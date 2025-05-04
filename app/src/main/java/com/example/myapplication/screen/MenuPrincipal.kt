@@ -11,7 +11,12 @@ import androidx.navigation.NavController
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MenuPrincipal(navController: NavController) {
-    Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+    Scaffold(
+        modifier = Modifier.fillMaxSize(),
+        topBar = {
+            TopAppBar(title = { Text("Menu Principal") })
+        }
+    ) { innerPadding ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -33,7 +38,7 @@ fun MenuPrincipal(navController: NavController) {
                 Text("🎓 TURMAS")
             }
             Button(
-                onClick = { navController.navigate("questionario") },
+                onClick = { navController.navigate("formularios") },
                 modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp)
             ) {
                 Text("❓ QUESTIONÁRIO")
@@ -46,8 +51,4 @@ fun MenuPrincipal(navController: NavController) {
             }
         }
     }
-
-
-
-
 }

@@ -21,4 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "My Application"
 include(":app")
-include(":sdk") // mantido, pois é necessário para usar o módulo OpenCV
